@@ -1,6 +1,12 @@
 function countVowelConsonant(str) {
-   // write code here
-   
+   let count = 0
+   let vowels = ["a","e","i","o","u"]
+   let consonants = ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z"]
+   str.split("").forEach(char => {
+      if(vowels.includes(char.toLowerCase())) {return count ++}
+      if(consonants.includes(char.toLowerCase())) {return count += 2}
+   })
+   return count
  }
  
  
